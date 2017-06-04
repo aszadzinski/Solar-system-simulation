@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Getting data..."
+./bin/a.out
+echo "Generating simulation"
+python2 scripts/visualization.py positions.data
