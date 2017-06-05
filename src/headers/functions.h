@@ -1,3 +1,14 @@
+/*
+ * File:    main.cpp
+ *
+ * Author: Albert Szadzinski
+ *
+ * Date:    04.06.17
+ *
+ * Description:
+ *          This file is part of solar-system project.
+ */
+
 #include <math.h>
 #include <fstream>
 #include <iostream>

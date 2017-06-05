@@ -1,3 +1,50 @@
+/*
+ * File:    main.cpp
+ *
+ * Author: Albert Szadzinski
+ *
+ * Date:    04.06.17
+ *
+ * Description:
+ *          This file is part of solar-system project.
+ *
+ * INTRODUCTION:
+ *   File contains numerical method to predicting planets positions,
+ * velocities, accelerations and centres of mass for planetary system.
+ *
+ * In each loop of calculation, program takes all forces for each planets 
+ * and sets acceleration 'a(t)' from Newton's law. Then updates velocities
+ * and positions according to:
+ *
+ *                    V(t+dt) = V(t) + a(t)*dt
+ *                    r(t+dt) = r(t) + V(t)*dt
+ * 
+ * On the occasion of calculate positions, program sets centre mass
+ * according to pattern:
+ *
+ *                    r' = \Sigma_k m_k*r_k / \Sigma_k m_k
+ * 
+ * All steps of simulation is calculate by division total time 'sym_time'
+ * per 'dt'.
+ *   Program saves data to positions.data file in real time. 
+ * First line contains number of object (planets + star) and second 
+ * informations about underlines file structure, e.g.:
+ *
+ *                     Objects: 2
+ *                     time|xpos|ypos|zpos|xcentremass|yc.|zc.
+ *                     0 0 0 0 1 1 1           <-  
+ *                     0 10 10 10 1 1 1        <-first step
+ *                     1 -1 -1 -1 0.5 0.5 0.5  <-
+ *                     1 9 9 9 0.5 0.5 0.5     <-second step
+ *                     . . . .  .   .   .      <-
+ *                     . . . .  .   .   .      <-third step etc..
+ *                     . . . .  .   .   .
+ *
+ * After calculation positions.data can be useed in other
+ * programs (/scripts/visualization.py)
+ *
+ *           */
+
 #include <iostream>
 #include "headers/functions.h"
 #include <fstream>

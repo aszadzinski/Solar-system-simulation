@@ -1,4 +1,18 @@
-import turtle as t
+#!/usr/bin/env python
+
+###############################
+# File: visualization.py      #
+#                             #
+# Author: Albert Szadzinski   #
+#                             #
+# Date: 04.06.17              #
+#                             #
+# Description:                #
+#    This script is part      #
+#    of solar-system project  #
+#                             #
+###############################
+
 import time
 import visual as vis
 import os
